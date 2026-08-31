@@ -250,24 +250,6 @@ function AdminPage() {
 
       <section className={`${card} mt-8 flex flex-col gap-3`}>
         <h2 className={sectionTitle}>Profil</h2>
-        <input
-          className={field}
-          value={profile?.name ?? ""}
-          placeholder="Ism"
-          onChange={(e) => setProfile((p) => (p ? { ...p, name: e.target.value } : p))}
-        />
-        <input
-          className={field}
-          value={profile?.tagline ?? ""}
-          placeholder="Sarlavha / joylashuv"
-          onChange={(e) => setProfile((p) => (p ? { ...p, tagline: e.target.value } : p))}
-        />
-        <textarea
-          className={`${field} min-h-28`}
-          value={profile?.bio ?? ""}
-          placeholder="Qisqacha ma'lumot"
-          onChange={(e) => setProfile((p) => (p ? { ...p, bio: e.target.value } : p))}
-        />
         <div className="flex flex-col items-center gap-3 rounded-2xl border border-hair p-4">
           {profile?.avatar_url ? (
             <img
@@ -312,6 +294,24 @@ function AdminPage() {
             }}
           />
         </div>
+        <input
+          className={field}
+          value={profile?.name ?? ""}
+          placeholder="Ism"
+          onChange={(e) => setProfile((p) => (p ? { ...p, name: e.target.value } : p))}
+        />
+        <input
+          className={field}
+          value={profile?.tagline ?? ""}
+          placeholder="Sarlavha / joylashuv"
+          onChange={(e) => setProfile((p) => (p ? { ...p, tagline: e.target.value } : p))}
+        />
+        <textarea
+          className={`${field} min-h-28`}
+          value={profile?.bio ?? ""}
+          placeholder="Qisqacha ma'lumot"
+          onChange={(e) => setProfile((p) => (p ? { ...p, bio: e.target.value } : p))}
+        />
 
         <button
           type="button"
